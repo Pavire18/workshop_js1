@@ -23,9 +23,9 @@
 */
 let ganador=0;
 let tableroEjemplo= [
-                [ 1, 1, 2],
+                [ 2, 1, 1],
                 [ 1, 2, 2],
-                [ 2, 1, 1]
+                [ 2, 1, 0]
             ];
 
 const allEqual = arr => arr.every(val => val === arr[0]);
@@ -49,9 +49,7 @@ function resultadoPartida(tablero){
     //CREAMOS ARRAYS DE LAS COLUMNAS PARA COMPROBAR
     column1=tablero.map(x=> x[0])
     column2=tablero.map(x=> x[1])
-    column3=tablero.map(x=> x[3])
-
-
+    column3=tablero.map(x=> x[2])
 
     //COMPROBAR VERTICALMENTE
     ganador=allEqual(column1) && ganador===0 ? column1[0]: ganador;
